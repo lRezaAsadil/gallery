@@ -1,0 +1,93 @@
+@import url(../styles/reset.css);
+@import url(../styles/grid.css);
+@font-face {
+  font-family: iran;
+  src: url("../fonts/IRANSansWeb_Light.eot");
+  src: url("../fonts/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"), url("../fonts/IRANSansWeb_Light.woff2") format("woff2"), url("../fonts/IRANSansWeb_Light.woff") format("woff"), url("../fonts/IRANSansWeb_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: b-iran;
+  src: url("../fonts/IRANSansWeb_Bold.eot");
+  src: url("../fonts/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/IRANSansWeb_Bold.woff2") format("woff2"), url("../fonts/IRANSansWeb_Bold.woff") format("woff"), url("../fonts/IRANSansWeb_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body, span, input {
+  font-family: iran;
+ background-color: rgb(159, 160, 162);
+  direction: rtl;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-res {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfix {
+  clear: both;
+}
+
+[class^="col-"] {
+  float: right;
+  padding: 0 15px;
+}
+
+.container{
+  overflow: hidden;
+  padding: 10px;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr) ;
+  grid-template-rows: repeat(6,1fr) ;
+  grid-gap: 5px;
+
+}
+ .container div img{
+  transition: all .3s ease;
+/* border-radius: 100%;  */
+}
+ .container div img:hover{
+  transform: scale(1.3) ;
+  border-radius: 4px;
+  cursor: pointer;
+} 
+
+
+.c1{
+grid-column:1/ 3 ;
+grid-row:1/3 ;
+}
+.c7{
+grid-column:2/ 4 ;
+grid-row:3/5 ;
+}
+.c13{
+grid-column:3/ span 2 ;
+grid-row:5/ span 2 ;
+}
+.c17{
+grid-column:2/ 4 ;
+grid-row:7/ 9 ;
+}
+
+
